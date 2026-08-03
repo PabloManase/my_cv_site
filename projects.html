@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects | Paballo Manase</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html"><span class="brand-mark">PM</span> Paballo Manase</a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+    <label for="nav-toggle" class="nav-toggle" aria-label="Toggle navigation"><span></span></label>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="certifications.html">Certifications</a></li>
+      <li><a href="dashboards.html">Dashboards</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="cover_letter.html">Cover Letter</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="wrap section">
+  <div class="eyebrow">Portfolio</div>
+  <h1 class="section-title">Projects</h1>
+  <p class="lede">A working portfolio spanning backend systems and applied data analytics. Data projects link through to visual dashboards where available.</p>
+
+  <div class="category-heading">
+    <div class="category-dot"></div><h3>Data Analytics Projects</h3><div class="rule"></div>
+  </div>
+
+  <div class="grid-2">
+    <div class="proj-card">
+      <span class="proj-meta">FinTech · Classification</span>
+      <h4>Fraud Detection System</h4>
+      <div class="proj-tags">
+        <span class="tag">scikit-learn</span><span class="tag">SMOTE</span><span class="tag">Flask API</span><span class="tag">Random Forest</span>
+      </div>
+      <p class="desc">Built on the Kaggle Credit Card Fraud Detection dataset, comparing Logistic Regression and Random Forest classifiers with SMOTE (imbalanced-learn) to correct severe class imbalance, deployed behind a Flask API. Debugged dependency compilation errors, Windows long-path limits, and relative path failures during a Windows/VS Code deployment. Shipped with a full README for reviewers.</p>
+    </div>
+
+    <div class="proj-card">
+      <span class="proj-meta">Regression · R² = 0.914</span>
+      <h4>Employee Salary Predictor</h4>
+      <div class="proj-tags">
+        <span class="tag">Multiple Linear Regression</span><span class="tag">Flask</span><span class="tag">Bootstrap 5</span>
+      </div>
+      <p class="desc">Multiple linear regression model predicting salary from age, gender, education, job title, and experience, with a full ML pipeline in <code>model.py</code> and a Flask + Bootstrap 5 frontend. Resolved Flake8 linting and Jinja2 template errors along the way. Achieved an R² of 0.914 on the fitted model.</p>
+    </div>
+
+    <div class="proj-card">
+      <span class="proj-meta">Time Series · Forecasting</span>
+      <h4>Multi-Model Stock Price Forecasting &amp; Analytics System</h4>
+      <div class="proj-tags">
+        <span class="tag">ARIMA</span><span class="tag">Prophet</span><span class="tag">LSTM</span><span class="tag">Power BI</span><span class="tag">Plotly</span>
+      </div>
+      <p class="desc">Forecasting pipeline combining ARIMA, Facebook Prophet, and LSTM models, with Power BI integration, Plotly dashboards, anomaly detection, and feature engineering. Fixed linting issues across six files and switched Keras imports to resolve Pylance warnings.</p>
+    </div>
+
+    <div class="proj-card">
+      <span class="proj-meta">Unsupervised · Clustering</span>
+      <h4>Retail Customer Segmentation Project</h4>
+      <div class="proj-tags">
+        <span class="tag">K-Means</span><span class="tag">PCA</span><span class="tag">Plotly/Dash</span><span class="tag">Power BI · Tableau</span>
+      </div>
+      <p class="desc">K-Means clustering on income and spending data, evaluated with Silhouette, Davies–Bouldin, and Calinski–Harabasz metrics, and visualised through Plotly/Dash dashboards with Power BI and Tableau integration. Structured into <code>advanced_clustering.ipynb</code> to keep the original baseline notebook intact.</p>
+    </div>
+
+    <div class="proj-card">
+      <span class="proj-meta">EDA · Classification</span>
+      <h4>Iris Data Analysis Suite</h4>
+      <div class="proj-tags">
+        <span class="tag">Seaborn</span><span class="tag">Plotly Dash</span><span class="tag">Random Forest</span><span class="tag">Power BI export</span>
+      </div>
+      <p class="desc">Exploratory data analysis upgraded with correlation heatmaps, a Seaborn/Plotly Dash dashboard, and Random Forest classification, plus a Power BI export script. Fixed recurring <code>NameError: df not defined</code> issues and rebuilt a corrected 150-row dataset.</p>
+    </div>
+  </div>
+
+  <div style="margin-top:18px;">
+    <a class="btn btn-outline" href="dashboards.html">Explore the dashboards built from these projects →</a>
+  </div>
+
+  <div class="category-heading">
+    <div class="category-dot software"></div><h3>Software Engineering Projects</h3><div class="rule"></div>
+  </div>
+
+  <div class="grid-2">
+    <div class="proj-card software">
+      <span class="proj-meta">Finance · Reporting</span>
+      <h4>Finance Calculator &amp; Data Insights Tool</h4>
+      <div class="proj-tags">
+        <span class="tag">Python</span><span class="tag">Data Analysis</span><span class="tag">Reporting Automation</span>
+      </div>
+      <p class="desc">A Python-driven finance calculator and data insights tool for financial forecasting and loan-repayment modelling, with input validation, statistical computation, trend analysis, and automated summary reporting to support scenario planning.</p>
+    </div>
+
+    <div class="proj-card software">
+      <span class="proj-meta">Backend · CRUD</span>
+      <h4>Bookstore Inventory Management System</h4>
+      <div class="proj-tags">
+        <span class="tag">Python</span><span class="tag">SQLite</span><span class="tag">SQL</span><span class="tag">Data Modeling</span>
+      </div>
+      <p class="desc">A scalable, database-driven inventory system with a fully normalised SQLite backend and end-to-end CRUD for books and authors. Optimised SQL query performance to improve reporting and retrieval speed.</p>
+    </div>
+
+    <div class="proj-card software">
+      <span class="proj-meta">DevOps · Documentation</span>
+      <h4>Capstone: Data Consolidation &amp; Documentation</h4>
+      <div class="proj-tags">
+        <span class="tag">Docker</span><span class="tag">Git</span><span class="tag">Sphinx</span><span class="tag">Data Pipeline</span>
+      </div>
+      <p class="desc">A fully containerised data analytics pipeline built with Docker for reproducibility and consistent version control, unifying multiple workflows and documented with Sphinx-based standards for long-term collaboration.</p>
+    </div>
+
+    <div class="proj-card software">
+      <span class="proj-meta">Full-Stack · Roles &amp; Permissions</span>
+      <h4>News Application</h4>
+      <div class="proj-tags">
+        <span class="tag">Django</span><span class="tag">REST API</span><span class="tag">Authentication</span><span class="tag">MySQL/MariaDB</span>
+      </div>
+      <p class="desc">Full-stack platform for managing news articles with custom authentication, role-based permissions, and RESTful APIs across Admin, Editor, Journalist, and Reader profiles, including unit testing for API reliability.</p>
+    </div>
+
+    <div class="proj-card software">
+      <span class="proj-meta">Systems · File I/O</span>
+      <h4>Task Manager System</h4>
+      <div class="proj-tags">
+        <span class="tag">Python</span><span class="tag">File Handling</span><span class="tag">Exception Handling</span>
+      </div>
+      <p class="desc">A task management system with persistent file storage, multi-user authentication, and role-governed operations, built around secure credential handling and structured data parsing with low-level file I/O.</p>
+    </div>
+
+    <div class="proj-card software">
+      <span class="proj-meta">Full-Stack · Marketplace</span>
+      <h4>eCommerce Platform</h4>
+      <div class="proj-tags">
+        <span class="tag">Django</span><span class="tag">MariaDB</span><span class="tag">REST APIs</span><span class="tag">Twitter API</span>
+      </div>
+      <p class="desc">Vendor and buyer registration platform with role-based access control, a MariaDB backend, and REST APIs, with Twitter API integration for social sharing. Refactored for originality after the initial build.</p>
+    </div>
+
+    <div class="proj-card software">
+      <span class="proj-meta">CRUD · UML Design</span>
+      <h4>Sticky Notes App</h4>
+      <div class="proj-tags">
+        <span class="tag">Python</span><span class="tag">UML</span><span class="tag">CRUD</span>
+      </div>
+      <p class="desc">A CRUD-based notes application planned with UML diagrams before implementation, covering full create, read, update, and delete functionality end to end.</p>
+    </div>
+
+    <div class="proj-card software">
+      <span class="proj-meta">Backend · CRUD</span>
+      <h4>Shoe Inventory Management System</h4>
+      <div class="proj-tags">
+        <span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Inventory Logic</span>
+      </div>
+      <p class="desc">A stock-tracking system for a retail shoe inventory, handling additions, restocks, and reporting through a structured database-backed CRUD workflow.</p>
+    </div>
+
+    <div class="proj-card software">
+      <span class="proj-meta">Database · Relational Design</span>
+      <h4>Ebookstore</h4>
+      <div class="proj-tags">
+        <span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Foreign Keys</span><span class="tag">JOINs</span>
+      </div>
+      <p class="desc">A book catalogue and ordering system built around foreign key relationships and SQL JOINs across authors, titles, and stock tables for accurate relational reporting.</p>
+    </div>
+
+    <div class="proj-card software">
+      <span class="proj-meta">Software Design · Architecture</span>
+      <h4>Software Design Task Manager</h4>
+      <div class="proj-tags">
+        <span class="tag">UML</span><span class="tag">Use Case Diagrams</span><span class="tag">MVC</span>
+      </div>
+      <p class="desc">A design-first task manager exercise: use case, sequence, and class diagrams paired with an MVC/CRUD matrix, mapping architecture before a line of implementation code.</p>
+    </div>
+
+    <div class="proj-card software">
+      <span class="proj-meta">Algorithms · Technical Assessment</span>
+      <h4>Advanced FizzBuzz</h4>
+      <div class="proj-tags">
+        <span class="tag">Python</span><span class="tag">CLI</span><span class="tag">Input Validation</span>
+      </div>
+      <p class="desc">Originally a HackerRank technical assessment, extended into an advanced FizzBuzz CLI with custom ranges, input validation, and file export. README documents planned next steps: a GUI version, web deployment, unit testing, database support, and CSV/PDF export.</p>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span>© 2026 Paballo Manase - All Rights Reserved</span>
+    <div class="footer-links">
+      <a href="mailto:paballomanase07@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/paballo-manase-189a45257/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/PabloManase/Developer-Protfolio" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboards | Paballo Manase</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html"><span class="brand-mark">PM</span> Paballo Manase</a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+    <label for="nav-toggle" class="nav-toggle" aria-label="Toggle navigation"><span></span></label>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="certifications.html">Certifications</a></li>
+      <li><a href="dashboards.html" class="active">Dashboards</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="cover_letter.html">Cover Letter</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="wrap section">
+  <div class="eyebrow">Analytics</div>
+  <h1 class="section-title">Dashboards</h1>
+  <p class="lede">Visual recreations of the output from each data analytics project - same tooling and modelling approach, rebuilt here as static charts.</p>
+
+  <div class="disclaimer-box">
+    <strong>Note on the data:</strong> these panels are illustrative recreations built with representative sample data to demonstrate the analytical approach, model comparison, and visualization style used in each project, not a live feed of the original datasets. The Employee Salary Predictor's R² of 0.914 reflects the actual model result.
+  </div>
+
+  <div class="grid-2" style="align-items:stretch;">
+
+    <div class="dash-panel">
+      <div class="dash-head">
+        <div>
+          <h4>Fraud Detection | model comparison</h4>
+          <p>Logistic Regression vs. Random Forest + SMOTE on precision, recall and F1.</p>
+        </div>
+        <span class="dash-badge">Classification</span>
+      </div>
+      <div class="dash-body">
+        <div class="legend-row">
+          <span class="legend-item"><span class="legend-dot" style="background:#9FB4C7"></span>Logistic Regression</span>
+          <span class="legend-item"><span class="legend-dot" style="background:#0F8B8D"></span>Random Forest + SMOTE</span>
+        </div>
+        <svg viewBox="0 0 420 240" role="img" aria-label="Bar chart comparing precision, recall and F1 score between Logistic Regression and Random Forest with SMOTE" style="width:100%; height:auto;">
+<line x1="42" y1="210.0" x2="410" y2="210.0" stroke="#E2E7ED" stroke-width="1"/>
+<text x="36" y="213.0" text-anchor="end" font-size="9" fill="#5B6B7C">0.00</text>
+<line x1="42" y1="161.5" x2="410" y2="161.5" stroke="#E2E7ED" stroke-width="1"/>
+<text x="36" y="164.5" text-anchor="end" font-size="9" fill="#5B6B7C">0.25</text>
+<line x1="42" y1="113.0" x2="410" y2="113.0" stroke="#E2E7ED" stroke-width="1"/>
+<text x="36" y="116.0" text-anchor="end" font-size="9" fill="#5B6B7C">0.50</text>
+<line x1="42" y1="64.5" x2="410" y2="64.5" stroke="#E2E7ED" stroke-width="1"/>
+<text x="36" y="67.5" text-anchor="end" font-size="9" fill="#5B6B7C">0.75</text>
+<line x1="42" y1="16.0" x2="410" y2="16.0" stroke="#E2E7ED" stroke-width="1"/>
+<text x="36" y="19.0" text-anchor="end" font-size="9" fill="#5B6B7C">1.00</text>
+<rect x="62.4" y="37.3" width="31.9" height="172.7" rx="2" fill="#9FB4C7"/>
+<rect x="103.3" y="25.7" width="31.9" height="184.3" rx="2" fill="#0F8B8D"/>
+<text x="103.3" y="226" text-anchor="middle" font-size="9.5" fill="#5B6B7C">Precision</text>
+<rect x="185.1" y="52.9" width="31.9" height="157.1" rx="2" fill="#9FB4C7"/>
+<rect x="226.0" y="29.6" width="31.9" height="180.4" rx="2" fill="#0F8B8D"/>
+<text x="226.0" y="226" text-anchor="middle" font-size="9.5" fill="#5B6B7C">Recall</text>
+<rect x="307.8" y="45.1" width="31.9" height="164.9" rx="2" fill="#9FB4C7"/>
+<rect x="348.7" y="27.6" width="31.9" height="182.4" rx="2" fill="#0F8B8D"/>
+<text x="348.7" y="226" text-anchor="middle" font-size="9.5" fill="#5B6B7C">F1-score</text>
+        </svg>
+        <div class="dash-note">From the <a href="projects.html">Fraud Detection System</a> - Kaggle Credit Card Fraud dataset, deployed via Flask API.</div>
+      </div>
+    </div>
+
+    <div class="dash-panel">
+      <div class="dash-head">
+        <div>
+          <h4>Salary Predictor | regression fit</h4>
+          <p>Predicted salary vs. years of experience, with the fitted trend line.</p>
+        </div>
+        <span class="dash-badge">R² = 0.914</span>
+      </div>
+      <div class="dash-body">
+        <div class="legend-row">
+          <span class="legend-item"><span class="legend-dot" style="background:#9FB4C7"></span>Observed salaries</span>
+          <span class="legend-item"><span class="legend-dot" style="background:#0F8B8D"></span>Fitted trend</span>
+        </div>
+        <svg viewBox="0 0 420 240" role="img" aria-label="Scatter plot of salary against years of experience with a fitted regression line" style="width:100%; height:auto;">
+<line x1="44" y1="210.0" x2="408" y2="210.0" stroke="#E2E7ED" stroke-width="1"/>
+<text x="38" y="213.0" text-anchor="end" font-size="8.5" fill="#5B6B7C">R30k</text>
+<line x1="44" y1="161.5" x2="408" y2="161.5" stroke="#E2E7ED" stroke-width="1"/>
+<text x="38" y="164.5" text-anchor="end" font-size="8.5" fill="#5B6B7C">R46k</text>
+<line x1="44" y1="113.0" x2="408" y2="113.0" stroke="#E2E7ED" stroke-width="1"/>
+<text x="38" y="116.0" text-anchor="end" font-size="8.5" fill="#5B6B7C">R62k</text>
+<line x1="44" y1="64.5" x2="408" y2="64.5" stroke="#E2E7ED" stroke-width="1"/>
+<text x="38" y="67.5" text-anchor="end" font-size="8.5" fill="#5B6B7C">R79k</text>
+<line x1="44" y1="16.0" x2="408" y2="16.0" stroke="#E2E7ED" stroke-width="1"/>
+<text x="38" y="19.0" text-anchor="end" font-size="8.5" fill="#5B6B7C">R95k</text>
+<circle cx="60.5" cy="188.7" r="3.2" fill="#9FB4C7" fill-opacity="0.9"/>
+<circle cx="77.1" cy="180.4" r="3.2" fill="#9FB4C7" fill-opacity="0.9"/>
+<circle cx="93.6" cy="179.5" r="3.2" fill="#9FB4C7" fill-opacity="0.9"/>
+<circle cx="110.2" cy="179.8" r="3.2" fill="#9FB4C7" fill-opacity="0.9"/>
+<circle cx="126.7" cy="173.8" r="3.2" fill="#9FB4C7" fill-opacity="0.9"/>
+<circle cx="143.3" cy="160.0" r="3.2" fill="#9FB4C7" fill-opacity="0.9"/>
+<circle cx="159.8" cy="143.8" r="3.2" fill="#9FB4C7" fill-opacity="0.9"/>
+<circle cx="176.4" cy="133.1" r="3.2" fill="#9FB4C7" fill-opacity="0.9"/>
+<circle cx="192.9" cy="130.5" r="3.2" fill="#9FB4C7" fill-opacity="0.9"/>
+<circle cx="209.5" cy="131.3" r="3.2" fill="#9FB4C7" fill-opacity="0.9"/>
+<circle cx="226.0" cy="127.6" r="3.2" fill="#9FB4C7" fill-opacity="0.9"/>
+<circle cx="242.5" cy="115.7" r="3.2" fill="#9FB4C7" fill-opacity="0.9"/>
+<circle cx="259.1" cy="99.4" r="3.2" fill="#9FB4C7" fill-opacity="0.9"/>
+<circle cx="275.6" cy="86.5" r="3.2" fill="#9FB4C7" fill-opacity="0.9"/>
+<circle cx="292.2" cy="81.8" r="3.2" fill="#9FB4C7" fill-opacity="0.9"/>
+<circle cx="308.7" cy="82.4" r="3.2" fill="#9FB4C7" fill-opacity="0.9"/>
+<circle cx="325.3" cy="80.7" r="3.2" fill="#9FB4C7" fill-opacity="0.9"/>
+<circle cx="341.8" cy="71.1" r="3.2" fill="#9FB4C7" fill-opacity="0.9"/>
+<circle cx="358.4" cy="55.2" r="3.2" fill="#9FB4C7" fill-opacity="0.9"/>
+<circle cx="374.9" cy="40.7" r="3.2" fill="#9FB4C7" fill-opacity="0.9"/>
+<circle cx="391.5" cy="33.6" r="3.2" fill="#9FB4C7" fill-opacity="0.9"/>
+<circle cx="408.0" cy="33.4" r="3.2" fill="#9FB4C7" fill-opacity="0.9"/>
+<line x1="44.0" y1="204.0" x2="408.0" y2="33.9" stroke="#0F8B8D" stroke-width="2.5"/>
+<text x="44" y="228" font-size="9" fill="#5B6B7C">Years of experience -</text>
+        </svg>
+        <div class="dash-note">From the <a href="projects.html">Employee Salary Predictor</a> - multiple linear regression, Flask + Bootstrap 5.</div>
+      </div>
+    </div>
+
+    <div class="dash-panel">
+      <div class="dash-head">
+        <div>
+          <h4>Stock Price Forecasting</h4>
+          <p>Historical close price with a forecast band, in the style of the ARIMA / Prophet / LSTM pipeline.</p>
+        </div>
+        <span class="dash-badge">Time series</span>
+      </div>
+      <div class="dash-body">
+        <div class="legend-row">
+          <span class="legend-item"><span class="legend-dot" style="background:#0B2239"></span>Historical close</span>
+          <span class="legend-item"><span class="legend-dot" style="background:#0F8B8D"></span>Forecast (mean ± band)</span>
+        </div>
+        <svg viewBox="0 0 420 240" role="img" aria-label="Line chart of historical stock price with a forecast band projecting forward" style="width:100%; height:auto;">
+<line x1="40" y1="214.0" x2="408" y2="214.0" stroke="#E2E7ED" stroke-width="1"/>
+<text x="34" y="217.0" text-anchor="end" font-size="8.5" fill="#5B6B7C">137</text>
+<line x1="40" y1="164.5" x2="408" y2="164.5" stroke="#E2E7ED" stroke-width="1"/>
+<text x="34" y="167.5" text-anchor="end" font-size="8.5" fill="#5B6B7C">144</text>
+<line x1="40" y1="115.0" x2="408" y2="115.0" stroke="#E2E7ED" stroke-width="1"/>
+<text x="34" y="118.0" text-anchor="end" font-size="8.5" fill="#5B6B7C">151</text>
+<line x1="40" y1="65.5" x2="408" y2="65.5" stroke="#E2E7ED" stroke-width="1"/>
+<text x="34" y="68.5" text-anchor="end" font-size="8.5" fill="#5B6B7C">158</text>
+<line x1="40" y1="16.0" x2="408" y2="16.0" stroke="#E2E7ED" stroke-width="1"/>
+<text x="34" y="19.0" text-anchor="end" font-size="8.5" fill="#5B6B7C">165</text>
+<polyline points="40.0,192.7 49.4,188.3 58.9,183.6 68.3,174.3 77.7,163.1 87.2,157.2 96.6,151.4 106.1,136.3 115.5,128.6 124.9,122.5 134.4,109.5 143.8,104.6 153.2,98.0 162.7,97.9 172.1,98.4 181.5,106.6 191.0,111.2 200.4,114.5 209.8,122.5 219.3,128.3 228.7,134.4 238.2,146.5 247.6,149.2 257.0,151.7 266.5,155.4 275.9,159.6 285.3,151.9 294.8,146.3 304.2,135.9" fill="none" stroke="#0B2239" stroke-width="2.2"/>
+<polygon points="304.2,135.9 313.6,101.1 323.1,94.7 332.5,88.4 341.9,82.0 351.4,75.6 360.8,69.2 370.3,62.8 379.7,56.4 389.1,50.0 398.6,43.7 408.0,37.3 304.2,135.9 408.0,140.8 398.6,143.0 389.1,145.1 379.7,147.2 370.3,149.4 360.8,151.5 351.4,153.6 341.9,155.7 332.5,157.9 323.1,160.0 313.6,162.1" fill="#0F8B8D" fill-opacity="0.15"/>
+<polyline points="304.2,135.9 313.6,131.6 323.1,127.4 332.5,123.1 341.9,118.9 351.4,114.6 360.8,110.3 370.3,106.1 379.7,101.8 389.1,97.6 398.6,93.3 408.0,89.1" fill="none" stroke="#0F8B8D" stroke-width="2.2" stroke-dasharray="6 4"/>
+<line x1="304.2" y1="16" x2="304.2" y2="214" stroke="#C8D1DB" stroke-width="1" stroke-dasharray="2 3"/>
+<text x="304.2" y="230" text-anchor="middle" font-size="8.5" fill="#5B6B7C">forecast start</text>
+        </svg>
+        <div class="dash-note">From the <a href="projects.html">Multi-Model Stock Price Forecasting &amp; Analytics System</a> - ARIMA, Prophet, LSTM with Power BI integration.</div>
+      </div>
+    </div>
+
+    <div class="dash-panel">
+      <div class="dash-head">
+        <div>
+          <h4>Retail Customer Segmentation</h4>
+          <p>K-Means clusters by income and spending score.</p>
+        </div>
+        <span class="dash-badge">Clustering</span>
+      </div>
+      <div class="dash-body">
+        <div class="legend-row">
+          <span class="legend-item"><span class="legend-dot" style="background:#9FB4C7"></span>Budget shoppers</span>
+          <span class="legend-item"><span class="legend-dot" style="background:#E8A33D"></span>High income / low spend</span>
+          <span class="legend-item"><span class="legend-dot" style="background:#0F8B8D"></span>Target segment</span>
+          <span class="legend-item"><span class="legend-dot" style="background:#0B2239"></span>Occasional spenders</span>
+        </div>
+        <svg viewBox="0 0 420 240" role="img" aria-label="Scatter plot showing four customer clusters by income and spending score" style="width:100%; height:auto;">
+<line x1="42" y1="210.0" x2="408" y2="210.0" stroke="#E2E7ED" stroke-width="1"/>
+<line x1="42" y1="161.5" x2="408" y2="161.5" stroke="#E2E7ED" stroke-width="1"/>
+<line x1="42" y1="113.0" x2="408" y2="113.0" stroke="#E2E7ED" stroke-width="1"/>
+<line x1="42" y1="64.5" x2="408" y2="64.5" stroke="#E2E7ED" stroke-width="1"/>
+<line x1="42" y1="16.0" x2="408" y2="16.0" stroke="#E2E7ED" stroke-width="1"/>
+<circle cx="177.9" cy="148.2" r="3.6" fill="#9FB4C7" fill-opacity="0.85"/>
+<circle cx="182.8" cy="168.0" r="3.6" fill="#9FB4C7" fill-opacity="0.85"/>
+<circle cx="168.7" cy="164.9" r="3.6" fill="#9FB4C7" fill-opacity="0.85"/>
+<circle cx="184.5" cy="138.0" r="3.6" fill="#9FB4C7" fill-opacity="0.85"/>
+<circle cx="86.4" cy="184.1" r="3.6" fill="#9FB4C7" fill-opacity="0.85"/>
+<circle cx="100.4" cy="132.6" r="3.6" fill="#9FB4C7" fill-opacity="0.85"/>
+<circle cx="126.0" cy="153.6" r="3.6" fill="#9FB4C7" fill-opacity="0.85"/>
+<circle cx="110.2" cy="161.1" r="3.6" fill="#9FB4C7" fill-opacity="0.85"/>
+<circle cx="120.1" cy="170.8" r="3.6" fill="#9FB4C7" fill-opacity="0.85"/>
+<circle cx="143.5" cy="156.3" r="3.6" fill="#9FB4C7" fill-opacity="0.85"/>
+<circle cx="180.8" cy="150.2" r="3.6" fill="#9FB4C7" fill-opacity="0.85"/>
+<circle cx="183.7" cy="139.4" r="3.6" fill="#9FB4C7" fill-opacity="0.85"/>
+<circle cx="191.0" cy="150.9" r="3.6" fill="#9FB4C7" fill-opacity="0.85"/>
+<circle cx="94.0" cy="139.1" r="3.6" fill="#9FB4C7" fill-opacity="0.85"/>
+<circle cx="187.9" cy="136.4" r="3.6" fill="#9FB4C7" fill-opacity="0.85"/>
+<circle cx="141.6" cy="148.2" r="3.6" fill="#9FB4C7" fill-opacity="0.85"/>
+<circle cx="319.3" cy="146.7" r="3.6" fill="#E8A33D" fill-opacity="0.85"/>
+<circle cx="361.7" cy="180.7" r="3.6" fill="#E8A33D" fill-opacity="0.85"/>
+<circle cx="302.0" cy="145.3" r="3.6" fill="#E8A33D" fill-opacity="0.85"/>
+<circle cx="405.5" cy="192.9" r="3.6" fill="#E8A33D" fill-opacity="0.85"/>
+<circle cx="388.3" cy="172.9" r="3.6" fill="#E8A33D" fill-opacity="0.85"/>
+<circle cx="312.2" cy="180.1" r="3.6" fill="#E8A33D" fill-opacity="0.85"/>
+<circle cx="384.6" cy="144.2" r="3.6" fill="#E8A33D" fill-opacity="0.85"/>
+<circle cx="299.7" cy="160.2" r="3.6" fill="#E8A33D" fill-opacity="0.85"/>
+<circle cx="299.8" cy="153.8" r="3.6" fill="#E8A33D" fill-opacity="0.85"/>
+<circle cx="333.3" cy="143.7" r="3.6" fill="#E8A33D" fill-opacity="0.85"/>
+<circle cx="404.4" cy="167.0" r="3.6" fill="#E8A33D" fill-opacity="0.85"/>
+<circle cx="406.5" cy="179.1" r="3.6" fill="#E8A33D" fill-opacity="0.85"/>
+<circle cx="303.6" cy="161.1" r="3.6" fill="#E8A33D" fill-opacity="0.85"/>
+<circle cx="298.2" cy="186.1" r="3.6" fill="#E8A33D" fill-opacity="0.85"/>
+<circle cx="324.0" cy="44.1" r="3.6" fill="#0F8B8D" fill-opacity="0.85"/>
+<circle cx="294.5" cy="79.3" r="3.6" fill="#0F8B8D" fill-opacity="0.85"/>
+<circle cx="377.9" cy="62.5" r="3.6" fill="#0F8B8D" fill-opacity="0.85"/>
+<circle cx="388.5" cy="26.3" r="3.6" fill="#0F8B8D" fill-opacity="0.85"/>
+<circle cx="320.5" cy="53.4" r="3.6" fill="#0F8B8D" fill-opacity="0.85"/>
+<circle cx="337.2" cy="42.0" r="3.6" fill="#0F8B8D" fill-opacity="0.85"/>
+<circle cx="346.0" cy="47.2" r="3.6" fill="#0F8B8D" fill-opacity="0.85"/>
+<circle cx="348.9" cy="23.6" r="3.6" fill="#0F8B8D" fill-opacity="0.85"/>
+<circle cx="335.6" cy="55.2" r="3.6" fill="#0F8B8D" fill-opacity="0.85"/>
+<circle cx="360.6" cy="67.2" r="3.6" fill="#0F8B8D" fill-opacity="0.85"/>
+<circle cx="311.5" cy="21.3" r="3.6" fill="#0F8B8D" fill-opacity="0.85"/>
+<circle cx="337.3" cy="47.9" r="3.6" fill="#0F8B8D" fill-opacity="0.85"/>
+<circle cx="277.6" cy="56.2" r="3.6" fill="#0F8B8D" fill-opacity="0.85"/>
+<circle cx="344.2" cy="80.7" r="3.6" fill="#0F8B8D" fill-opacity="0.85"/>
+<circle cx="348.4" cy="42.7" r="3.6" fill="#0F8B8D" fill-opacity="0.85"/>
+<circle cx="283.3" cy="43.0" r="3.6" fill="#0F8B8D" fill-opacity="0.85"/>
+<circle cx="147.8" cy="47.6" r="3.6" fill="#0B2239" fill-opacity="0.85"/>
+<circle cx="134.5" cy="45.8" r="3.6" fill="#0B2239" fill-opacity="0.85"/>
+<circle cx="179.7" cy="88.3" r="3.6" fill="#0B2239" fill-opacity="0.85"/>
+<circle cx="100.3" cy="47.8" r="3.6" fill="#0B2239" fill-opacity="0.85"/>
+<circle cx="206.1" cy="74.1" r="3.6" fill="#0B2239" fill-opacity="0.85"/>
+<circle cx="146.7" cy="52.9" r="3.6" fill="#0B2239" fill-opacity="0.85"/>
+<circle cx="130.7" cy="67.1" r="3.6" fill="#0B2239" fill-opacity="0.85"/>
+<circle cx="129.9" cy="66.8" r="3.6" fill="#0B2239" fill-opacity="0.85"/>
+<circle cx="163.0" cy="71.1" r="3.6" fill="#0B2239" fill-opacity="0.85"/>
+<circle cx="137.4" cy="41.8" r="3.6" fill="#0B2239" fill-opacity="0.85"/>
+<circle cx="96.4" cy="54.4" r="3.6" fill="#0B2239" fill-opacity="0.85"/>
+<circle cx="179.3" cy="70.5" r="3.6" fill="#0B2239" fill-opacity="0.85"/>
+<circle cx="119.3" cy="39.8" r="3.6" fill="#0B2239" fill-opacity="0.85"/>
+<circle cx="121.2" cy="78.1" r="3.6" fill="#0B2239" fill-opacity="0.85"/>
+<text x="42" y="228" font-size="9" fill="#5B6B7C">Annual income (scaled) -</text>
+        </svg>
+        <div class="dash-note">From the <a href="projects.html">Retail Customer Segmentation Project</a> - K-Means with PCA and Silhouette/Davies–Bouldin/Calinski–Harabasz evaluation.</div>
+      </div>
+    </div>
+
+    <div class="dash-panel" style="grid-column:1 / -1;">
+      <div class="dash-head">
+        <div>
+          <h4>Iris Data Analysis | feature means by species</h4>
+          <p>Mean sepal and petal measurements across the three Iris species.</p>
+        </div>
+        <span class="dash-badge">EDA</span>
+      </div>
+      <div class="dash-body">
+        <div class="legend-row">
+          <span class="legend-item"><span class="legend-dot" style="background:#9FB4C7"></span>Setosa</span>
+          <span class="legend-item"><span class="legend-dot" style="background:#E8A33D"></span>Versicolor</span>
+          <span class="legend-item"><span class="legend-dot" style="background:#0F8B8D"></span>Virginica</span>
+        </div>
+        <svg viewBox="0 0 420 240" role="img" aria-label="Grouped bar chart of mean sepal and petal measurements for Setosa, Versicolor and Virginica" style="width:100%; max-width:640px; height:auto;">
+<line x1="42" y1="210.0" x2="410" y2="210.0" stroke="#E2E7ED" stroke-width="1"/>
+<text x="36" y="213.0" text-anchor="end" font-size="9" fill="#5B6B7C">0</text>
+<line x1="42" y1="161.5" x2="410" y2="161.5" stroke="#E2E7ED" stroke-width="1"/>
+<text x="36" y="164.5" text-anchor="end" font-size="9" fill="#5B6B7C">2</text>
+<line x1="42" y1="113.0" x2="410" y2="113.0" stroke="#E2E7ED" stroke-width="1"/>
+<text x="36" y="116.0" text-anchor="end" font-size="9" fill="#5B6B7C">4</text>
+<line x1="42" y1="64.5" x2="410" y2="64.5" stroke="#E2E7ED" stroke-width="1"/>
+<text x="36" y="67.5" text-anchor="end" font-size="9" fill="#5B6B7C">5</text>
+<line x1="42" y1="16.0" x2="410" y2="16.0" stroke="#E2E7ED" stroke-width="1"/>
+<text x="36" y="19.0" text-anchor="end" font-size="9" fill="#5B6B7C">7</text>
+<rect x="53.5" y="71.4" width="17.9" height="138.6" rx="2" fill="#9FB4C7"/>
+<rect x="76.5" y="46.5" width="17.9" height="163.5" rx="2" fill="#E8A33D"/>
+<rect x="99.5" y="27.1" width="17.9" height="182.9" rx="2" fill="#0F8B8D"/>
+<text x="88.0" y="226" text-anchor="middle" font-size="9.5" fill="#5B6B7C">Sepal L.</text>
+<rect x="145.5" y="115.8" width="17.9" height="94.2" rx="2" fill="#9FB4C7"/>
+<rect x="168.5" y="132.4" width="17.9" height="77.6" rx="2" fill="#E8A33D"/>
+<rect x="191.5" y="126.9" width="17.9" height="83.1" rx="2" fill="#0F8B8D"/>
+<text x="180.0" y="226" text-anchor="middle" font-size="9.5" fill="#5B6B7C">Sepal W.</text>
+<rect x="237.5" y="168.4" width="17.9" height="41.6" rx="2" fill="#9FB4C7"/>
+<rect x="260.5" y="90.8" width="17.9" height="119.2" rx="2" fill="#E8A33D"/>
+<rect x="283.5" y="57.6" width="17.9" height="152.4" rx="2" fill="#0F8B8D"/>
+<text x="272.0" y="226" text-anchor="middle" font-size="9.5" fill="#5B6B7C">Petal L.</text>
+<rect x="329.5" y="204.5" width="17.9" height="5.5" rx="2" fill="#9FB4C7"/>
+<rect x="352.5" y="174.0" width="17.9" height="36.0" rx="2" fill="#E8A33D"/>
+<rect x="375.5" y="154.6" width="17.9" height="55.4" rx="2" fill="#0F8B8D"/>
+<text x="364.0" y="226" text-anchor="middle" font-size="9.5" fill="#5B6B7C">Petal W.</text>
+        </svg>
+        <div class="dash-note">From the <a href="projects.html">Iris Data Analysis Suite</a> - correlation heatmaps, Seaborn/Plotly Dash dashboard, Random Forest classification.</div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span>© 2026 Paballo Manase - All Rights Reserved</span>
+    <div class="footer-links">
+      <a href="mailto:paballomanase07@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/paballo-manase-189a45257/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/PabloManase/Developer-Protfolio" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
